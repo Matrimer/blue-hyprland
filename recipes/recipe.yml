@@ -4,7 +4,8 @@ name: blue-hyprland
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/wayblueorg/hyprland-nvidia
+#base-image: ghcr.io/ublue-os/silverblue-main # default
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -19,7 +20,25 @@ modules:
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
+      - hyprutils
+      # Launcher
+      - wofi # default is rofi-wayland
       - neovim
+      
+      - nwg-panel
+      - nwg-launchers
+      
+      - powertop
+      - tlp
+
+      # included allready
+      #- hyprland
+      #- xdg-desktop-portal-hyprland
+      #- waybar
+      #- brightnessctl
+      #- foot
+      #- foot-terminfo
+      # default suggestions
       # - micro
       # - starship
     remove:
@@ -27,7 +46,7 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
+      - power-profiles-daemon
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -36,7 +55,8 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        # - org.mozilla.firefox
+        - com.github.d4nj1.tlpui
+        - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
