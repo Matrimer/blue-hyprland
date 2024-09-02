@@ -23,12 +23,15 @@ modules:
     install:
       - hyprutils
       # Launcher
-      - wofi # default is rofi-wayland
+      #- wofi # default is rofi-wayland
+      # Necessary nice-to have
+      - gnome-software
+
       - neovim
-      
-      - nwg-panel
-      - nwg-launchers
-      
+      - mpd
+      - mpc
+     
+      # Powersaving 
       - powertop
       - tlp
 
