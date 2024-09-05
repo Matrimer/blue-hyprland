@@ -39,6 +39,7 @@ It should look appealing. That's one of the reasons hyprland was chosen.
 - System settings
 - Efficient keyboard controlled pointing device
 - keyboard controlled file manager
+- password manager
 
 ### What it's built on
 - Rofi-wayland
