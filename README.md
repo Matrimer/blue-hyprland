@@ -12,6 +12,7 @@ will be used. One such example is GParted.
 
 ## Aesthetics
 It should look appealing. That's one of the reasons hyprland was chosen.
+- Primarily use GTK, for less often used applications QT might be ok too.
 
 ### TODO:
 - Theme SDDM
@@ -21,13 +22,14 @@ It should look appealing. That's one of the reasons hyprland was chosen.
 - Firefox
 - Gnome Software
 - Bluetooth Manager
-- Disk utility (GParted)
+- Disk utility (GParted, Gnome-Disks or KDE Partition Manager?)
 - Proprietary NVIDIA-drivers
 - TLP (possibly with TLP-UI)
 - Pavucontrol
 - nm-applet
 - gamescope
 - brightnessctl
+- Syncthing
 
 ### TO-DO
 - word processor 
