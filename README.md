@@ -1,8 +1,57 @@
 # blue-hyprland &nbsp; [![bluebuild build badge](https://github.com/matrimer/blue-hyprland/actions/workflows/build.yml/badge.svg)](https://github.com/matrimer/blue-hyprland/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+    See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-After setup, it is recommended you update this README to describe your custom image.
+This aims to become a discoverable and easy to use, yet efficient keyboard oriented desktop. It should have sane defaults,
+and be ready to use without any setup. Graphics drivers should work out of the box, should be gaming ready.
+
+## UX
+Keyboard-oriented with mouse support.
+For many common tasks, traditional mouse-oriented GUI
+will be used. One such example is GParted.
+
+## Aesthetics
+It should look appealing. That's one of the reasons hyprland was chosen.
+
+### TODO:
+- Theme SDDM
+
+## Included software
+- Terminal emulator
+- Firefox
+- Gnome Software
+- Bluetooth Manager
+- Disk utility (GParted)
+- Proprietary NVIDIA-drivers
+- TLP (possibly with TLP-UI)
+- Pavucontrol
+- nm-applet
+- gamescope
+- brightnessctl
+
+### TO-DO
+- word processor 
+- video player
+- music player
+- image viewer
+- keyboard oriented web-browser
+- spreadsheets
+- System settings
+- Efficient keyboard controlled pointing device
+- keyboard controlled file manager
+
+### What it's built on
+- Rofi-wayland
+- hyprland
+- possibly a lightweight river desktop for laptops
+- waybar
+- Network-Manager
+- Pipewire
+- Wayland
+- SDDM
+
+#### Wayblue hyprland-nvidia image
+fedora atomic desktop + ublue + bluebuild
 
 ## Installation
 
@@ -32,7 +81,7 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 ## ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+If built on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
 
 ## Verification
 
