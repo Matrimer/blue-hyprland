@@ -26,6 +26,7 @@ modules:
       #- wofi # default is rofi-wayland
       # Necessary nice-to have
       - gnome-software
+      - gparted
 
       # Other nice-to-have that make things work:
       - gamescope # wayland mini-compositor for games
@@ -54,6 +55,7 @@ modules:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
       - power-profiles-daemon
+      #- gnome-disk-utility
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
