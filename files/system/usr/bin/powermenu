@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ACTION=$(echo "poweroff
+reboot
+hybrid-sleep
+hibernate
+suspend
+suspend-then-hibernate
+soft-reboot" | rofi -dmenu)
+
+echo $ACTION
+notify-send "Executing 'systemctl $ACTION'"
+systemctl ${ACTION}
