@@ -4,10 +4,14 @@ name: blue-hyprland
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-#base-image: ghcr.io/wayblueorg/hyprland-nvidia
+base-image: ghcr.io/wayblueorg/hyprland-nvidia
 #base-image: ghcr.io/ublue-os/silverblue-main # default
-base-image: ghcr.io/ublue-os/silverblue-nvidia 
+#base-image: ghcr.io/ublue-os/silverblue-nvidia 
 image-version: latest # latest is also supported if you want new updates ASAP
+
+# Compile some source based programs, like sent
+# stages:
+  # - 
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -22,6 +26,7 @@ modules:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       - hyprutils
+      - hyprland-protocols-devel
       # Launcher
       #- wofi # default is rofi-wayland
       # Necessary nice-to have
@@ -31,9 +36,34 @@ modules:
       # Other nice-to-have that make things work:
       - gamescope # wayland mini-compositor for games
 
+      # Editors (testing)
+      - helix
+      - micro
+      - emacs
       - neovim
-      - mpd
-      - mpc
+      - joe
+      
+      # Terminal emulator
+      - foot
+      - foot-terminfo
+
+      # File-browsers
+
+      # Email-clients?
+      - aerc
+      - alpine
+      
+      # Instant messaging
+      - finch
+      
+      # News, RSS, blogs
+      
+      
+      # File-sharing
+
+      # Music players
+      #- mpd
+      #- mpc
      
       # Powersaving 
       - powertop
@@ -44,10 +74,7 @@ modules:
       #- xdg-desktop-portal-hyprland
       #- waybar
       #- brightnessctl
-      #- foot
-      #- foot-terminfo
       # default suggestions
-      # - micro
       # - starship
     remove:
       # example: removing firefox (in favor of the flatpak)
@@ -66,6 +93,8 @@ modules:
       install:
         - com.github.d4nj1.tlpui
         - org.mozilla.firefox
+        - com.github.tchx84.Flatseal
+        - io.mpv.Mpv
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
@@ -73,6 +102,8 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       remove:
       # - org.gnome.eog
-
+  - type: script
+    snippets:
+      - "setcap 'CAP_SYS_NICE=eip' /usr/bin/gamescope"
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 

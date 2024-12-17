@@ -1,3 +1,12 @@
 #!/bin/bash
+while getopts g:e:w: opts
+do
+  case "{$opts}" in
+    g) exec gamemoderun gamescope -W 1920 -H 1080 -e flatpak run com.valvesoftware.Steam ;;
+    e) exec gamemoderun gamescope -W 1920 -H 1080 --expose-wayland flatpak run com.valvesoftware.Steam ;;
+    *) exec gamemoderun flatpak run com.valvesoftware.Steam ;;
+  esac
+done
 
-exec gamemoderun gamescope flatpak run com.valvesoftware.Steam
+#exec gamemoderun gamescope --expose-wayland -W 1920 -H 1080 -e flatpak run com.valvesoftware.Steam
+#exec gamemoderun gamescope -W 1920 -H 1080 flatpak run com.valvesoftware.Steam

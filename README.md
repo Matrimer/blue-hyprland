@@ -7,15 +7,24 @@ and be ready to use without any setup. Graphics drivers should work out of the b
 
 ## UX
 Keyboard-oriented with mouse support.
-For many common tasks, traditional mouse-oriented GUI
+For many somewhat less common tasks, traditional mouse-oriented GUI
 will be used. One such example is GParted.
 
 ## Aesthetics
 It should look appealing. That's one of the reasons hyprland was chosen.
 - Primarily use GTK, for less often used applications QT might be ok too.
 
+### Themes:
+
+#### HX
+adwaita-dark, (poimandres)
+
+
 ### TODO:
 - Theme SDDM
+- Mouse control (left-click menus? Rofi as menu?)
+- keyboard shortcut hints
+- some menus and a way of accessing them
 
 ## Included software
 - Terminal emulator
@@ -81,6 +90,28 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+
+# Post-install
+
+## NVIDIA
+**NOTE: These proprietary NVIDIA drivers currently support NVIDIA GPUS from the Maxwell, Pascal, Volta, Turing, Ampere and Ada Lovelace family.
+For anything else, using the nouveau drivers is recommended**
+
+To enable the proprietary NVIDIA drivers and disable nouveau drivers if you use nvidia,
+run this:
+```
+rpm-ostree kargs \
+    --append=rd.driver.blacklist=nouveau \
+    --append=modprobe.blacklist=nouveau \
+    --append=nvidia-drm.modeset=1
+```
+
+### NVIDIA Optimus
+Run this after installation if you want nvidia optimus for a laptop with
+both integrated graphics and discrete nvidia graphics
+```
+ujust configure-nvidia-optimus
+```
 
 ## ISO
 

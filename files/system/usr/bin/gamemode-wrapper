@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec gamemoderun gamescope "$@"
+exec gamemoderun gamescope --expose-wayland -W 1920 -H 1080 "$@"

@@ -6,7 +6,7 @@ hybrid-sleep
 hibernate
 suspend
 suspend-then-hibernate
-soft-reboot" | rofi -dmenu)
+soft-reboot" | rofi -dmenu -P 'Power-menu')
 
 echo $ACTION
 notify-send "Executing 'systemctl $ACTION'"
