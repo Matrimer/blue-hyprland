@@ -5,6 +5,11 @@
 This aims to become a discoverable and easy to use, yet efficient keyboard oriented desktop. It should have sane defaults,
 and be ready to use without any setup. Graphics drivers should work out of the box, should be gaming ready.
 
+## System
+
+### todo:
+Create installation iso.
+
 ## UX
 Keyboard-oriented with mouse support.
 For many somewhat less common tasks, traditional mouse-oriented GUI

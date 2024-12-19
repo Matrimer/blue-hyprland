@@ -43,6 +43,7 @@ modules:
       # Android
       #- waydroid is installed through script
       - lzip # needed for waydroid script. Maybe better to install in a temporary container
+      # Also needs python3, which is allready available.
 
       # Editors (testing)
       - helix
@@ -72,7 +73,7 @@ modules:
      
       # Powersaving 
       - powertop # homebrew
-      - tlp
+      # - tlp
 
       # included allready
       #- hyprland
@@ -96,7 +97,7 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        - com.github.d4nj1.tlpui
+        #- com.github.d4nj1.tlpui
         - org.mozilla.firefox
         - com.github.tchx84.Flatseal
         - io.mpv.Mpv
