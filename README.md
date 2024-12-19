@@ -8,13 +8,16 @@ and be ready to use without any setup. Graphics drivers should work out of the b
 ## UX
 Keyboard-oriented with mouse support.
 For many somewhat less common tasks, traditional mouse-oriented GUI
-will be used. One such example is GParted.
+can be used. One such example is GParted.
 
 ## Aesthetics
 It should look appealing. That's one of the reasons hyprland was chosen.
-- Primarily use GTK, for less often used applications QT might be ok too.
+Primarily use GTK
 
 ### Themes:
+Adwaita-dark
+
+Find a way of more easily setting themes.
 
 #### HX
 adwaita-dark, (poimandres)
@@ -25,6 +28,7 @@ adwaita-dark, (poimandres)
 - Mouse control (left-click menus? Rofi as menu?)
 - keyboard shortcut hints
 - some menus and a way of accessing them
+- setup homebrew and install cli programs through it instead of rpm-ostree
 
 ## Included software
 - Terminal emulator
@@ -33,16 +37,17 @@ adwaita-dark, (poimandres)
 - Bluetooth Manager
 - Disk utility (GParted, Gnome-Disks or KDE Partition Manager?)
 - Proprietary NVIDIA-drivers
-- TLP (possibly with TLP-UI)
+- TLP (possibly with TLP-UI) (Might change as default in fedora-atomic seems to be changing to something sensible)
 - Pavucontrol
 - nm-applet
 - gamescope
 - brightnessctl
-- Syncthing
+- Syncthing (not really necessary)
 
 ### TO-DO
+- Email
 - word processor 
-- video player
+- video player (MPV?)
 - music player
 - image viewer
 - keyboard oriented web-browser
@@ -50,7 +55,8 @@ adwaita-dark, (poimandres)
 - System settings
 - Efficient keyboard controlled pointing device
 - keyboard controlled file manager
-- password manager
+- password manager (Bitwarden? With dmenu thing?)
+- Waydroid
 
 ### What it's built on
 - Rofi-wayland

@@ -33,8 +33,16 @@ modules:
       - gnome-software
       - gparted
 
+      # Terminal emulator
+      - foot
+      - foot-terminfo
+
       # Other nice-to-have that make things work:
       - gamescope # wayland mini-compositor for games
+
+      # Android
+      #- waydroid is installed through script
+      - lzip # needed for waydroid script. Maybe better to install in a temporary container
 
       # Editors (testing)
       - helix
@@ -43,18 +51,15 @@ modules:
       - neovim
       - joe
       
-      # Terminal emulator
-      - foot
-      - foot-terminfo
 
       # File-browsers
 
-      # Email-clients?
+      # Email-clients? homebrew
       - aerc
       - alpine
       
       # Instant messaging
-      - finch
+      - finch # homebrew
       
       # News, RSS, blogs
       
@@ -66,7 +71,7 @@ modules:
       #- mpc
      
       # Powersaving 
-      - powertop
+      - powertop # homebrew
       - tlp
 
       # included allready
@@ -81,7 +86,7 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - power-profiles-daemon
+      # - power-profiles-daemon
       # - gnome-disk-utility
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -105,7 +110,10 @@ modules:
 
   - type: script
     snippets:
-      - "setcap 'CAP_SYS_NICE=eip' /usr/bin/gamescope"
+      - "systemctl enable setcaps.service"
+  #   #   - "setcap 'CAP_SYS_NICE=eip' /usr/bin/gamescope"
+  #   scripts:
+  #     - setcaps.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
