@@ -1,3 +1,4 @@
 #!/bin/bash
 
-exec gamemoderun-priority gamescope -W 1920 -H 1080 "$@"
+exec gamescope -H 1080 -W 1920 -r 165 --adaptive-sync --force-grab-cursor --mangoapp -- "$@"
+

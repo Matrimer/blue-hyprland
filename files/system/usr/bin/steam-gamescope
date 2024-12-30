@@ -1,6 +1,7 @@
 #!/bin/bash
-exec gamemoderun-priority gamescope -W 1920 -H 1080 -e -- flatpak run com.valvesoftware.Steam
-
+#exec gamescope -W 1920 -H 1080 -e -- flatpak run com.valvesoftware.Steam
+#exec gamescope -W 1920 -H 1080 -e -r 165 --adaptive-sync --force-grab-cursor --mangoapp -e -- flatpak run com.valvesoftware.Steam
+exec gamescope -H 1080 -W 1920 -r 165 -e --adaptive-sync -- flatpak run com.valvesoftware.Steam
 # while getopts g:e:w: opts
 # do
 #   case "{$opts}" in

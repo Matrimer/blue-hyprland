@@ -1,0 +1,16 @@
+libadwaita_dark = #1D1D1D
+libadwaita_dark_alt = #303030 
+libadwaita_popup = #282828
+
+grey1 = #DEDDDA
+grey2 = #C0BFBC
+grey3 = #B0AFAC
+grey4 = #9A9996
+
+light-sky-blue: #99C1F1
+sky-blue: #62A0EA
+dark-sky-blue: #3584E4
+light-blue: #1C71D8
+blue: #1A5FB4
+dark-blue: #1B497E
+darker-blue: #193D66
