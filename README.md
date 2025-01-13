@@ -24,6 +24,9 @@ Primarily use GTK
 Adwaita-dark
 
 Find a way of more easily setting themes.
+- Set theme for rofi/menu+launcher.
+- Set theme for bar.
+- Set theme for hyprland
 
 #### HX
 adwaita-dark, (poimandres)

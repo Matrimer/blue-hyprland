@@ -1,0 +1,36 @@
+# image will be published to ghcr.io/<user>/<name>
+name: blue-hyprland
+# description will be included in the image's metadata
+description: This is my personal OS image.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/wayblueorg/hyprland-nvidia
+image-version: latest # latest is also supported if you want new updates ASAP
+
+modules:
+  - from-file: common/begin.yml
+  - type: rpm-ostree
+    install:
+      # Possibly nice-to-have
+      - gamescope # wayland mini-compositor for games
+      # - mangohud
+      # - steam
+
+      # Powersaving 
+      - powertop # not in homebrew
+      # - tlp
+
+      # included allready
+      #- hyprland
+      #- xdg-desktop-portal-hyprland
+      #- waybar
+      #- brightnessctl
+      # mesa-vulkan-drivers vulkan-tools vulkan-loader vulkan-validation-layers
+      # Not included, seems to cause problems if installed.
+      #- pipewire-plugin-vulkan
+      #- vulkan-headers 
+    remove:
+      - firefox
+      - firefox-langpacks
+    
+  - from-file: common/end.yml

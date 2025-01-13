@@ -1,0 +1,93 @@
+# image will be published to ghcr.io/<user>/<name>
+name: hyprland-bazzite
+# description will be included in the image's metadata
+description: This is my personal OS image.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia
+image-version: stable # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+modules:
+  - type: rpm-ostree
+    install:
+      # Common packages
+      - rofi-wayland
+      - thunar
+      - thunar-archive-plugin 
+      - thunar-volman
+      - wl-clipboard
+      - dunst
+      # screenshot
+      - slurp
+      - grim
+      # display
+      - wlr-randr
+      - wlsunset
+      - kanshi
+      - fontawesome-fonts-all
+      # - gnome-themes-extra
+      # - gnome-icon-theme
+      # - paper-icon-theme
+      # - breeze-icon-theme 
+      # - papirus-icon-theme
+
+      # Hyprland packages:
+      - hyprland
+      - waybar
+      - xdg-desktop-portal-hyprland
+      - brightnessctl
+      
+      - hyprpaper
+      - hyprlock
+      - hypridle
+           
+    remove:
+      # - discover-overlay # discord overlay
+      - sunshine # self-hosted game stream host for moonlight
+      # - sqlite3 # why is this installed?
+      # - cpulimit
+      - xwininfo
+      # - xrandr Needed for Lutris
+      - compsize
+      - ryzenadj
+      #- input-remapper
+      - btop
+      - fish
+      - xdotool
+      # - wmctrl # Needed by inxi
+      #-yad display GTK+ dialogs from shell scripts or command-line
+      - rar
+      - glow
+      #- ydotool
+      #- yafti
+      - stress-ng
+      #- btrfs-assistant
+      #- qemu
+      - nautilus-gsconnect
+      - nautilus
+      - steamdeck-backgrounds
+      # - gnome-randr-rust
+      # - gnome-shell-extension-supergfxctl-gex
+      # - gnome-shell-extension-launch-new-instance
+      # - gnome-shell-extension-user-theme
+      # - gnome-shell-extension-window-list-47.2-1.fc41.noarch
+      # - gnome-shell-extension-gsconnect
+      # - gnome-shell-extension-compiz-windows-effect
+      # - gnome-shell-extension-compiz-alike-magic-lamp-effect
+      # - gnome-shell-extension-just-perfection
+      # - gnome-shell-extension-blur-my-shell
+      # - gnome-shell-extension-hanabi
+      # - gnome-shell-extension-gamerzilla
+      # - gnome-shell-extension-bazzite-menu
+      # - gnome-shell-extension-hotedge
+      # - gnome-shell-extension-caffeine
+      # - gnome-shell-extension-appindicator-59-2.fc41.noarch
+      # - gnome-shell-extension-places-menu
+      # - gnome-shell-extension-common
+      # - gdm
+      # - gnome-session-wayland-session
+      # - gnome-browser-connector
+      # - gnome-shell
+
+  - from-file: common/end.yml
