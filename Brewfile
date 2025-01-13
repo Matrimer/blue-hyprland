@@ -1,7 +1,5 @@
 tap "homebrew/cask"
-# Editor
-brew "micro"
-brew "joe"
+
 # System
 brew "htop"
 brew "ncdu"
@@ -11,7 +9,6 @@ brew "ncdu"
 brew "mpd" # Something weird happens
 brew "mpc"
 # Instant Messaging
-# brew "finch" MacOS only
 # E-mail
 brew "aerc"
 brew "alpine"
@@ -25,8 +22,10 @@ brew "patat" # pandoc-presentations
 
 #cli workflow
 brew "zellij"
-brew "starship"
+# brew "starship"
 
 # File-browsers
+brew "superfile"
+
 # News, RSS, Blogs
-# 
+ 

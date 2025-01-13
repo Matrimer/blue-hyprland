@@ -1,3 +1,4 @@
 .config/foot/foot.ini # /etc/xdg/foot/foot.ini
 .config/hypr/hyprland.conf
+.config/hypr/hyprpaper.conf
 .config/helix/config.toml

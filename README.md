@@ -14,6 +14,7 @@ Create installation iso.
 Keyboard-oriented with mouse support.
 For many somewhat less common tasks, traditional mouse-oriented GUI
 can be used. One such example is GParted.
+XDG-default programs
 
 ## Aesthetics
 It should look appealing. That's one of the reasons hyprland was chosen.
