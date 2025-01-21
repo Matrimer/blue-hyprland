@@ -19,16 +19,16 @@ modules:
       # Powersaving 
       - powertop # not in homebrew
       # - tlp
-      
+    
       # Hyprland-packages
       - hyprland
-      - waybar
+      # - waybar
       - xdg-desktop-portal-hyprland
-      - rofi-wayland
-      - dunst
-      - wl-clipboard
-      - hyprlock
-      - hypridle
+      # - rofi-wayland
+      # - dunst
+      # - wl-clipboard
+      # - hyprlock
+      # - hypridle
 
       # Vulkan
       - mesa-vulkan-drivers
@@ -40,15 +40,15 @@ modules:
       - thunar-archive-plugin
       - thunar-volman
       # Screenshot:
-      - slurp
-      - grim
+      # - slurp
+      # - grim
       # display
       - wlr-randr
       - wlsunset
       - brightnessctl
       # unknown
-      - kansi
-      - fontawesome-fonts-all
+      # - kansi
+      # - fontawesome-fonts-all
       # Not included, seems to cause problems if installed.
       # - pipewire-plugin-vulkan
       #- vulkan-headers 

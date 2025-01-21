@@ -120,5 +120,6 @@ modules:
   #   #   - "setcap 'CAP_SYS_NICE=eip' /usr/bin/gamescope"
   #   scripts:
   #     - setcaps.sh
+  - type: initramfs
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

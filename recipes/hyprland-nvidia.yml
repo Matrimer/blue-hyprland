@@ -32,5 +32,6 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-    
+  
+  - from-file: common/nwg-shell.yml
   - from-file: common/end.yml
